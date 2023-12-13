@@ -208,7 +208,35 @@ stem(n,y)
 
 
 
-exp no.5
+exp no 5
+TITLE: To perform auto-correlation using Matlab
+N=1024;
+f1=1;
+fs=200;
+n=0:N-1;
+x=sin(2*pi*f1*n/fs);
+t=(1:N)*(1/fs);
+subplot(2,1,1);
+plot(t,x);
+xlabel('time')
+ylabel('Aqmplitude')
+grid;
+
+Rxx=xcorr(x);
+subplot(2,1,2);
+plot(Rxx)
+grid;
+
+title ('auto corelation')
+xlabel('lags')
+ylabel('Auto corelation')
+
+
+
+
+
+
+exp no.6
 TITLE: To perform cross-correlation using Matlab
 N=1024;
 f1=1;
